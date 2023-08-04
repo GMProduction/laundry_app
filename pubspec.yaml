@@ -73,6 +73,9 @@ flutter:
     - assets/images/bersih_wangi.png
     - assets/images/welcome.png
     - assets/images/logo_laundry.png
+    - assets/images/gopay.png
+    - assets/images/bank.png
+    - assets/images/credit.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
