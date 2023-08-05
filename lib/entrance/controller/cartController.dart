@@ -21,7 +21,7 @@ class CartController extends GetxController  {
     if (dataCart != null && dataCart["status"] == 200) {
       lengthCart.value = dataCart["payload"].length;
       for (int i = 0; i < lengthCart.value; i++) {
-        total = total + dataCart["payload"][i]["total"];
+        total = total + int.parse(dataCart["payload"][i]["total"]);
       }
     }
     print("Total  $total");

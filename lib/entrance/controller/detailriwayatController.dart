@@ -17,26 +17,8 @@ class DetailRiwayatController extends GetxController {
     dataRiwayat = await req.getApi("transaksi/$id");
     print("data Riwayat " + dataRiwayat.toString());
 
-    total.value = dataRiwayat["payload"]["total"];
+    total.value = int.parse(dataRiwayat["payload"]["total"]);
     dataReady.value = true;
   }
 
-  // void addCart(id, qty, berat) async {
-  //   readyToHit.value = false;
-  //   dataSimpanKeranjang =
-  //       await req.postForm("cart", {"paket": id, "qty": qty, "berat": berat});
-  //   print("dataSimpanKeranjang" + dataSimpanKeranjang.toString());
-  //
-  //   try {
-  //     if (dataSimpanKeranjang["status"] == 200) {
-  //       Get.offAndToNamed("/home");
-  //     } else {
-  //       Get.snackbar("Error", dataSimpanKeranjang["message"],
-  //           backgroundColor: Colors.white);
-  //     }
-  //   } catch (e) {
-  //     Get.snackbar("Error", "Terjadi Kesalahan", backgroundColor: Colors.white);
-  //   }
-  //   readyToHit.value = true;
-  // }
 }

@@ -297,25 +297,28 @@ String cartStatus(stat) {
   String status;
   switch (stat) {
     case '0':
-      status = 'Menunggu';
+      status = 'Menunggu Konfirmasi';
       break;
     case '1':
       status = 'Menunggu Pembayaran';
       break;
     case '2':
-      status = 'Aktif';
+      status = 'Pembayaran Diterima';
       break;
-    case '6':
-      status = 'Batal';
+    case '3':
+      status = 'Diproses';
       break;
-    case '7':
-      status = 'Menungu Konfirmasi';
+    case '4':
+      status = 'Dikirim';
       break;
-    case '9':
+    case '5':
       status = 'Selesai';
       break;
+    case '6':
+      status = 'Ditolak';
+      break;
     default:
-      status = 'Pesanan Baru';
+      status = 'Menunggu Konfirmasi';
       break;
   }
   return status;

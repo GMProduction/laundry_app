@@ -30,7 +30,7 @@ class Riwayat extends StatelessWidget {
                             },
                             notrans:  e["no_transaksi"],
                             tanggal: formatTanggalFromString(e["tanggal"]),
-                            status: e["status"].toString(),
+                            status:  cartStatus(e["status"]),
                             total: formatRupiahUseprefik(e["total"].toString()),
                           );
                         }).toList()),

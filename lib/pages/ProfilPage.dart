@@ -47,18 +47,18 @@ class Profile extends StatelessWidget {
                                 onChange: (val) {},
                               ),
                             ),
-                            SizedBox(height: 16.0),
-                            GenTextFieldRoundedBorder(
-                              label: 'Alamat',
-                              hint: 'Masukan Alamat',
-                              onChange: (val) {},
-                            ),
-                            SizedBox(height: 16.0),
-                            GenTextFieldRoundedBorder(
-                              label: 'No. Hp',
-                              hint: 'Masukan Nomor HP',
-                              onChange: (val) {},
-                            ),
+                            // SizedBox(height: 16.0),
+                            // GenTextFieldRoundedBorder(
+                            //   label: 'Alamat',
+                            //   hint: 'Masukan Alamat',
+                            //   onChange: (val) {},
+                            // ),
+                            // SizedBox(height: 16.0),
+                            // GenTextFieldRoundedBorder(
+                            //   label: 'No. Hp',
+                            //   hint: 'Masukan Nomor HP',
+                            //   onChange: (val) {},
+                            // ),
                             SizedBox(height: 32.0),
                             Container(
                               width: double.infinity,
