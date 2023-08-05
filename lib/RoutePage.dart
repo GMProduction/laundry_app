@@ -4,6 +4,8 @@ import 'package:laundry_app/entrance/daftar.dart';
 import 'package:laundry_app/entrance/login.dart';
 import 'package:laundry_app/entrance/unknownPage.dart';
 import 'package:laundry_app/entrance/welcomePage.dart';
+import 'package:laundry_app/pages/bayar.dart';
+import 'package:laundry_app/pages/bayar2.dart';
 import 'package:laundry_app/pages/detailPaket.dart';
 import 'package:laundry_app/pages/keranjang.dart';
 
@@ -23,6 +25,8 @@ class RoutePage {
     GetPage(name: "/detailriwayat", page: () => DetailRiwayat()),
     GetPage(name: "/keranjang", page: () => Keranjang()),
     GetPage(name: "/daftar", page: () => Daftar()),
+    GetPage(name: "/bayar", page: () => Bayar()),
+    GetPage(name: "/bayar2", page: () => Bayar2()),
 
   ];
 }

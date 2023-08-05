@@ -67,7 +67,8 @@ class Profile extends StatelessWidget {
                                 onPressed: () {
                                   // do something when the button is pressed
                                   box.remove("token");
-                                  Get.offAllNamed("/login");
+                                  Get.toNamed("/bayar");
+                                  // Get.offAllNamed("/login");
                                 },
                                 style: ElevatedButton.styleFrom(
                                   primary: Colors.red,
