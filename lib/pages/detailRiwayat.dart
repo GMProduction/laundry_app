@@ -87,7 +87,9 @@ class DetailRiwayat extends StatelessWidget {
                           child: CircularProgressIndicator(),
                         )
                       : RoundedButton(
-                          ontap: () {},
+                          ontap: () {
+                            Get.toNamed("/bayar?total="+drc.total.value.toString()+"&idtrans="+Get.parameters["id"]!);
+                          },
                           width: Size(double.infinity, 50),
                           text: "Bayar Sekarang",
                           textColor: Colors.white,

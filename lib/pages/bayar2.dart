@@ -3,10 +3,12 @@ import 'package:get/get.dart';
 import 'package:laundry_app/component/button/roundedButton.dart';
 import 'package:laundry_app/component/helper/JustHelper.dart';
 import 'package:laundry_app/component/text/genText.dart';
+import 'package:laundry_app/entrance/controller/bayarController.dart';
 
 class Bayar2 extends StatelessWidget {
-  const Bayar2({Key? key}) : super(key: key);
+  Bayar2({Key? key}) : super(key: key);
 
+  BayarController bc = Get.put(BayarController());
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,9 +29,9 @@ class Bayar2 extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       GenText("Total"),
-                      GenText(formatRupiahUseprefik("10000"),
+                      GenText(formatRupiahUseprefik(Get.parameters["total"]),
                           fontSize: 20, fontweight: FontWeight.bold),
-                      GenText("Order ID"),
+                      GenText("Order ID : "+Get.parameters["idtrans"]!),
                     ],
                   ),
                 ),
@@ -45,7 +47,7 @@ class Bayar2 extends StatelessWidget {
                             children: [
                               GenText(
                                Get.parameters["id"] == "1" ? "Payment Using Gopay" :
-                               Get.parameters["id"] == "2" ? "Payment Using Bank VT" : "Paymen Using Credit Card",
+                               Get.parameters["id"] == "2" ? "Payment Using Bank VT" : "Payment Using Credit Card",
                                 fontSize: 20,
                                 fontweight: FontWeight.bold,
                                 color: Colors.grey,
@@ -61,9 +63,10 @@ class Bayar2 extends StatelessWidget {
                             ],
                           ),
                         ),
-                        RoundedButton(ontap: (){
-
-                        }, text: "Pay", width: Size(double.infinity, 60), textColor: Colors.white,)
+                        Obx(() => bc.readyToHit.value ? RoundedButton(ontap: (){
+                          bc.bayar(Get.parameters["idtrans"], Get.parameters["id"] == "1" ? "Gopay" :
+                          Get.parameters["id"] == "2" ? "Bank Virtual Account" : "Credit Card",);
+                        }, text: "Pay", width: Size(double.infinity, 60), textColor: Colors.white,) : CircularProgressIndicator())
                       ],
                     ),
                   ),

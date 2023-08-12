@@ -26,9 +26,9 @@ class Bayar extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       GenText("Total"),
-                      GenText(formatRupiahUseprefik("10000"),
+                      GenText(formatRupiahUseprefik(Get.parameters["total"]),
                           fontSize: 20, fontweight: FontWeight.bold),
-                      GenText("Order ID"),
+                      GenText("Order ID : "+Get.parameters["idtrans"]!),
                     ],
                   ),
                 ),
@@ -52,7 +52,7 @@ class Bayar extends StatelessWidget {
                           children: [
                             InkWell(
                               onTap: (){
-                                Get.toNamed("/bayar2?id=1");
+                                Get.toNamed("/bayar2?id=1&total="+Get.parameters["total"]!+"&idtrans="+Get.parameters["idtrans"]!);
                               },
                               child: Container(
                                 child: Column(
@@ -78,7 +78,7 @@ class Bayar extends StatelessWidget {
                             ),
                             InkWell(
                               onTap: (){
-                                Get.toNamed("/bayar2?id=2");
+                                Get.toNamed("/bayar2?id=2&total="+Get.parameters["total"]!+"&idtrans="+Get.parameters["idtrans"]!);
                               },
                               child: Container(
                                 child: Column(
@@ -105,7 +105,7 @@ class Bayar extends StatelessWidget {
                             ),
                             InkWell(
                               onTap: (){
-                                Get.toNamed("/bayar2?id=3");
+                                Get.toNamed("/bayar2?id=3&total="+Get.parameters["total"]!+"&idtrans="+Get.parameters["idtrans"]!);
                               },
                               child: Container(
                                 child: Column(

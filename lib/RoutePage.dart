@@ -12,6 +12,7 @@ import 'package:laundry_app/pages/keranjang.dart';
 import 'entrance/splashScreen.dart';
 import 'pages/detailRiwayat.dart';
 import 'pages/homePage.dart';
+import 'pages/suksesbayar.dart';
 
 class RoutePage {
 
@@ -27,6 +28,7 @@ class RoutePage {
     GetPage(name: "/daftar", page: () => Daftar()),
     GetPage(name: "/bayar", page: () => Bayar()),
     GetPage(name: "/bayar2", page: () => Bayar2()),
+    GetPage(name: "/suksesbayar", page: () => SuksesBayar()),
 
   ];
 }
